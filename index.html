@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skylinee LLC | IT Networking Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f8fb;
+      color: #333;
+    }
+
+    header {
+      background: #0d47a1;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    nav {
+      background: #1565c0;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Skylinee LLC</h1>
+  <p>Professional IT Networking Solutions for the Washington DC DMV Area</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Skylinee LLC is a trusted IT services provider specializing in computer networking, infrastructure, cloud deployment, and cybersecurity. Located in the Washington DC DMV area, we support businesses with scalable and secure IT solutions tailored to their needs.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Network Installation</h3>
+      <p>Structured cabling, switch configuration, and LAN/WAN setup for businesses of all sizes.</p>
+    </div>
+    <div class="card">
+      <h3>Cybersecurity</h3>
+      <p>Protect your data with advanced firewalls, threat detection, and secure remote access.</p>
+    </div>
+    <div class="card">
+      <h3>Cloud Solutions</h3>
+      <p>Migrate to the cloud with secure, scalable solutions using AWS, Azure, or Google Cloud.</p>
+    </div>
+    <div class="card">
+      <h3>IT Support</h3>
+      <p>24/7 remote and on-site IT support to ensure your systems are always up and running.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <strong>info@skylineellc.com</strong></p>
+  <p>Phone: <strong>(202) 555-0143</strong></p>
+  <p>Location: Washington DC, Maryland & Virginia (DMV)</p>
+</section>
+
+<footer>
+  &copy; <?= date("Y") ?> Skylinee LLC. All rights reserved.
+</footer>
+
+</body>
+</html>
+
