@@ -79,4 +79,106 @@
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #1565c0;
+      font-size: 1.3em;
+    }
+
+    .card p {
+      margin-bottom: 0;
+    }
+
+    #contact p {
+      font-size: 1.05em;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Skylinee LLC</h1>
+  <p>Professional IT Networking Solutions in the Washington DC, Maryland & Virginia (DMV) Area</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p style="text-align: center;">
+    Skylinee LLC is a trusted IT services provider offering scalable and secure technology solutions. 
+    We specialize in network design, infrastructure, cloud migration, and cybersecurity — supporting businesses across the DMV region with tailored strategies and hands-on expertise.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Network Installation</h3>
+      <p>Professional cabling, LAN/WAN deployment, and switch/router configuration for all environments.</p>
+    </div>
+    <div class="card">
+      <h3>Cybersecurity</h3>
+      <p>Defend your business with firewalls, intrusion detection, threat analysis, and secure VPN solutions.</p>
+    </div>
+    <div class="card">
+      <h3>Cloud Solutions</h3>
+      <p>Modernize operations with AWS, Azure, and Google Cloud migrations, backups, and cloud-native tools.</p>
+    </div>
+    <div class="card">
+      <h3>IT Support</h3>
+      <p>24/7 remote and on-site support to ensure business continuity and minimize downtime.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <strong>corey.jarman@skylinee.co</strong></p>
+  <p>Phone: <strong>(240) 463-8226</strong></p>
+  <p>Location: Serving Washington DC, Maryland, and Northern Virginia</p>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> Skylinee LLC. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
