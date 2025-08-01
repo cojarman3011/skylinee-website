@@ -19,6 +19,12 @@
       text-align: center;
     }
 
+    header img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
     header h1 {
       margin: 0;
       font-size: 2.5em;
@@ -62,7 +68,7 @@
       background: white;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
     .card h3 {
@@ -81,6 +87,7 @@
 <body>
 
 <header>
+  <img src="skylineelogo.png" alt="Skylinee LLC Logo" />
   <h1>Skylinee LLC</h1>
   <p>Professional IT Networking Solutions for the Washington DC DMV Area</p>
 </header>
@@ -127,10 +134,11 @@
 
 <footer>
   &copy; <span id="year"></span> Skylinee LLC. All rights reserved.
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
