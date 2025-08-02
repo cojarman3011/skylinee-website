@@ -8,104 +8,220 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f8fb;
-      color: #333;
+      background-color: #f9f9f9;
+      color: #000;
     }
 
-    header {
-      background: #0d47a1;
+    /* Top bar */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #212121;
+      padding: 10px 20px;
       color: white;
-      padding: 40px 20px;
-      text-align: center;
     }
 
-    header img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 10px;
+    .top-bar .logo {
+      display: flex;
+      align-items: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
+    .top-bar .logo img {
+      height: 40px;
+      margin-right: 10px;
     }
 
-    header p {
-      margin-top: 10px;
-      font-size: 1.2em;
+    .top-bar input[type="text"] {
+      width: 40%;
+      padding: 8px;
+      border-radius: 3px;
+      border: none;
     }
 
-    nav {
-      background: #1565c0;
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    nav a {
+    .top-bar button {
+      background-color: #3ea6ff;
+      border: none;
       color: white;
+      padding: 8px 16px;
+      margin-left: 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 200px;
+      background-color: #f1f1f1;
+      height: calc(100vh - 56px);
+      padding-top: 20px;
+      position: fixed;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #000;
+      padding: 12px 20px;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .sidebar a:hover {
+      background-color: #ddd;
     }
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    /* Main content */
+    .main {
+      margin-left: 200px;
+      padding: 20px;
+      flex-grow: 1;
     }
 
-    section h2 {
-      font-size: 2em;
-      color: #0d47a1;
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
 
-    section p {
-      line-height: 1.6;
-      font-size: 1.1em;
+    .video-box {
+      background-color: white;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .video-box video {
+      width: 100%;
+      display: block;
+    }
+
+    .video-title {
+      padding: 10px;
+      font-size: 0.95em;
+      font-weight: 500;
     }
 
     footer {
-      background: #0d47a1;
+      background: #000;
       color: white;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
+
+    @media screen and (max-width: 1024px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
+      .top-bar input[type="text"] {
+        width: 60%;
+      }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="https://github.com/cojarman3011/skylinee-website/raw/main/skylinee%20logo.png" alt="Skylinee LLC Logo" />
-  <h1>Skylinee LLC</h1>
-  <p>Professional IT Networking Solutions for the Washington DC DMV Area</p>
-</header>
+  <!-- Top Navigation Bar -->
+  <div class="top-bar">
+    <div class="logo">
+      <img src="https://github.com/cojarman3011/skylinee-website/raw/main/skylinee%20logo.png" alt="Skylinee LLC Logo" />
+      <strong>Skylinee LLC</strong>
+    </div>
+    <input type="text" placeholder="Search videos..." />
+    <button onclick="alert('Upload page not yet implemented')">Upload</button>
+  </div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-</nav>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="#">Shorts</a>
+      <a href="#">You</a>
+      <a href="#">History</a>
+    </div>
 
-<section>
-  <h2>Welcome to Skylinee LLC</h2>
-  <p>Skylinee LLC is a trusted provider of advanced IT networking and security services throughout Washington DC, Maryland, and Virginia. We specialize in network design, firewall and endpoint security, remote support, and cloud migration.</p>
+    <!-- Main content -->
+    <div class="main">
+      <div class="video-grid">
+        <!-- Video boxes -->
+        <div class="video-box">
+          <video src="video1.mp4" controls poster="thumb1.jpg"></video>
+          <div class="video-title">Video 1 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video2.mp4" controls poster="thumb2.jpg"></video>
+          <div class="video-title">Video 2 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video3.mp4" controls poster="thumb3.jpg"></video>
+          <div class="video-title">Video 3 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video4.mp4" controls poster="thumb4.jpg"></video>
+          <div class="video-title">Video 4 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video5.mp4" controls poster="thumb5.jpg"></video>
+          <div class="video-title">Video 5 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video6.mp4" controls poster="thumb6.jpg"></video>
+          <div class="video-title">Video 6 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video7.mp4" controls poster="thumb7.jpg"></video>
+          <div class="video-title">Video 7 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video8.mp4" controls poster="thumb8.jpg"></video>
+          <div class="video-title">Video 8 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video9.mp4" controls poster="thumb9.jpg"></video>
+          <div class="video-title">Video 9 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video10.mp4" controls poster="thumb10.jpg"></video>
+          <div class="video-title">Video 10 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video11.mp4" controls poster="thumb11.jpg"></video>
+          <div class="video-title">Video 11 Title</div>
+        </div>
+        <div class="video-box">
+          <video src="video12.mp4" controls poster="thumb12.jpg"></video>
+          <div class="video-title">Video 12 Title</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <p>Whether you're a small business, a government agency, or a larger enterprise, our solutions are tailored to fit your infrastructure and compliance requirements.</p>
-</section>
+  <!-- Footer -->
+  <footer>
+    &copy; <span id="year"></span> Skylinee LLC. All rights reserved.
+  </footer>
 
-<footer>
-  &copy; <span id="year"></span> Skylinee LLC. All rights reserved.
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
