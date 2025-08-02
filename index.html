@@ -3,225 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Skylinee LLC | Home</title>
+  <title>Skylinee LLC | IT Networking Solutions</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #000;
+      background-color: #f4f8fb;
+      color: #333;
     }
 
-    /* Top bar */
-    .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #212121;
-      padding: 10px 20px;
+    header {
+      background: #0d47a1;
       color: white;
+      padding: 40px 20px;
+      text-align: center;
     }
 
-    .top-bar .logo {
-      display: flex;
-      align-items: center;
+    header img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
     }
 
-    .top-bar .logo img {
-      height: 40px;
-      margin-right: 10px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
 
-    .top-bar input[type="text"] {
-      width: 40%;
-      padding: 8px;
-      border-radius: 3px;
-      border: none;
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
     }
 
-    .top-bar button {
-      background-color: #3ea6ff;
-      border: none;
+    nav {
+      background: #1565c0;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
       color: white;
-      padding: 8px 16px;
-      margin-left: 10px;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    /* Layout */
-    .container {
-      display: flex;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      width: 200px;
-      background-color: #f1f1f1;
-      height: calc(100vh - 56px);
-      padding-top: 20px;
-      position: fixed;
-    }
-
-    .sidebar a {
-      display: block;
-      color: #000;
-      padding: 12px 20px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
     }
 
-    .sidebar a:hover {
-      background-color: #ddd;
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    /* Main content */
-    .main {
-      margin-left: 200px;
-      padding: 20px;
-      flex-grow: 1;
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .video-grid {
+    .services {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
-    .video-box {
-      background-color: white;
-      border-radius: 6px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      overflow: hidden;
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .video-box video {
-      width: 100%;
-      display: block;
-    }
-
-    .video-title {
-      padding: 10px;
-      font-size: 0.95em;
-      font-weight: 500;
+    .card h3 {
+      margin-top: 0;
     }
 
     footer {
-      background: #000;
+      background: #0d47a1;
       color: white;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
-
-    @media screen and (max-width: 1024px) {
-      .video-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-      .video-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        display: none;
-      }
-
-      .main {
-        margin-left: 0;
-      }
-
-      .top-bar input[type="text"] {
-        width: 60%;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
-  <div class="top-bar">
-    <div class="logo">
-      <img src="https://github.com/cojarman3011/skylinee-website/raw/main/skylinee%20logo.png" alt="Skylinee LLC Logo" />
-      <strong>Skylinee LLC</strong>
-    </div>
-    <input type="text" placeholder="Search videos..." />
-    <button onclick="alert('Upload page not yet implemented')">Upload</button>
-  </div>
+<header>
+  <img src="https://github.com/cojarman3011/skylinee-website/raw/main/skylinee%20logo.png" alt="Skylinee LLC Logo" />
+  <h1>Skylinee LLC</h1>
+  <p>Professional IT Networking Solutions for the Washington DC DMV Area</p>
+</header>
 
-  <div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <a href="#">Shorts</a>
-      <a href="#">You</a>
-      <a href="#">History</a>
-    </div>
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <!-- Main content -->
-    <div class="main">
-      <div class="video-grid">
-        <!-- Video boxes -->
-        <div class="video-box">
-          <video src="video1.mp4" controls poster="thumb1.jpg"></video>
-          <div class="video-title">Video 1 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video2.mp4" controls poster="thumb2.jpg"></video>
-          <div class="video-title">Video 2 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video3.mp4" controls poster="thumb3.jpg"></video>
-          <div class="video-title">Video 3 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video4.mp4" controls poster="thumb4.jpg"></video>
-          <div class="video-title">Video 4 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video5.mp4" controls poster="thumb5.jpg"></video>
-          <div class="video-title">Video 5 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video6.mp4" controls poster="thumb6.jpg"></video>
-          <div class="video-title">Video 6 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video7.mp4" controls poster="thumb7.jpg"></video>
-          <div class="video-title">Video 7 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video8.mp4" controls poster="thumb8.jpg"></video>
-          <div class="video-title">Video 8 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video9.mp4" controls poster="thumb9.jpg"></video>
-          <div class="video-title">Video 9 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video10.mp4" controls poster="thumb10.jpg"></video>
-          <div class="video-title">Video 10 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video11.mp4" controls poster="thumb11.jpg"></video>
-          <div class="video-title">Video 11 Title</div>
-        </div>
-        <div class="video-box">
-          <video src="video12.mp4" controls poster="thumb12.jpg"></video>
-          <div class="video-title">Video 12 Title</div>
-        </div>
-      </div>
+<section id="about">
+  <h2>About Us</h2>
+  <p>Skylinee LLC is a trusted IT services provider specializing in computer networking, infrastructure, cloud deployment, and cybersecurity. Located in the Washington DC DMV area, we support businesses with scalable and secure IT solutions tailored to their needs.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Network Installation</h3>
+      <p>Structured cabling, switch configuration, and LAN/WAN setup for businesses of all sizes.</p>
+    </div>
+    <div class="card">
+      <h3>Cybersecurity</h3>
+      <p>Protect your data with advanced firewalls, threat detection, and secure remote access.</p>
+    </div>
+    <div class="card">
+      <h3>Cloud Solutions</h3>
+      <p>Migrate to the cloud with secure, scalable solutions using AWS, Azure, or Google Cloud.</p>
+    </div>
+    <div class="card">
+      <h3>IT Support</h3>
+      <p>24/7 remote and on-site IT support to ensure your systems are always up and running.</p>
     </div>
   </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; <span id="year"></span> Skylinee LLC. All rights reserved.
-  </footer>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <strong>corey.jarman@skylinee.co</strong></p>
+  <p>Phone: <strong>(240) 463-8226</strong></p>
+  <p>Location: Washington DC, Maryland & Virginia (DMV)</p>
+</section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<footer>
+  &copy; <span id="year"></span> Skylinee LLC. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
